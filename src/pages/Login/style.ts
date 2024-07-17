@@ -42,6 +42,11 @@ const loginStyle = StyleSheet.create({
     backgroundColor: "#191919",
     width: "100%",
   },
+  loginContainer: {
+    alignItems: "center",
+    flexDirection: "row",
+    gap: 15,
+  },
 });
 
 export default loginStyle;
