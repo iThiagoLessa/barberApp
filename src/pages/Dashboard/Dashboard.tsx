@@ -1,28 +1,36 @@
 import { FontAwesome5 } from "@expo/vector-icons";
 import React from "react";
-import { Platform, StatusBar, Text, View } from "react-native";
+import { Platform, SafeAreaView, StatusBar, Text, View } from "react-native";
+import BarberCard from "./components/BarberCard";
 import dashboardStyle from "./style";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 const Dashboard = () => {
   return (
-    <SafeAreaView
-      style={{
-        flex: 1,
-        backgroundColor: "#383838",
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-      }}
-    >
-      <View style={dashboardStyle.mainContainerWrapper}>
+    <View style={dashboardStyle.mainContainerWrapper}>
+      <StatusBar backgroundColor="#191919" barStyle="light-content" />
+      {Platform.OS === "ios" && (
+        <View style={dashboardStyle.statusBarBackground} />
+      )}
+      <SafeAreaView
+        style={{
+          flex: 1,
+          backgroundColor: "transparent",
+        }}
+      >
         <View style={dashboardStyle.headerWrapper}>
-          <Text>Bem vindo, Thiago Lessa</Text>
-          <FontAwesome5 name="user-circle" size={30} color="#900" />
+          <View style={dashboardStyle.textWrapper}>
+            <Text style={dashboardStyle.welcomeWrapperText}>Bem vindo,</Text>
+            <Text style={dashboardStyle.nameWrapperText}>Thiago Lessa</Text>
+          </View>
+          <FontAwesome5 name="user-circle" size={40} color="white" />
         </View>
-        <View>
-          <Text>Dashboard</Text>
+        <View style={dashboardStyle.contentWrapper}>
+          <Text style={dashboardStyle.barberText}>Barbeiros</Text>
+
+          <BarberCard />
         </View>
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </View>
   );
 };
 
