@@ -1,10 +1,10 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 type RootStackParamList = {
-  Dashboard: undefined;
+  BarberList: undefined;
 };
 
 export type LoggedUserScreensNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
-  "Dashboard"
+  "BarberList"
 >;

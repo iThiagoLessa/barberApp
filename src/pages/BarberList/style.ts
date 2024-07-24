@@ -1,6 +1,6 @@
 import { Platform, StyleSheet } from "react-native";
 
-const dashboardStyle = StyleSheet.create({
+const baberListStyle = StyleSheet.create({
   mainContainerWrapper: {
     flex: 1,
     backgroundColor: "#383838",
@@ -55,4 +55,4 @@ const dashboardStyle = StyleSheet.create({
   },
 });
 
-export default dashboardStyle;
+export default baberListStyle;

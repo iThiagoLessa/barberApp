@@ -2,7 +2,7 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Login from "../pages/Login/Login";
-import Dashboard from "../pages/Dashboard/Dashboard";
+import BarberList from "../pages/BarberList/BarberList";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,8 +15,8 @@ const AuthRoutes = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Dashboard"
-        component={Dashboard}
+        name="BarberList"
+        component={BarberList}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

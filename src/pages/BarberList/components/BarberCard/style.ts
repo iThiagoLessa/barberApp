@@ -10,7 +10,6 @@ const barberCardStyle = StyleSheet.create({
     gap: 20,
   },
   circleImage: {
-    backgroundColor: "#ff9000",
     width: 80,
     height: 80,
     alignItems: "center",
@@ -22,6 +21,12 @@ const barberCardStyle = StyleSheet.create({
   },
   informationWrapper: {
     marginTop: 15,
+    gap: 5,
+  },
+  wrapper: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 5,
   },
   nameText: {
     fontSize: 18,
