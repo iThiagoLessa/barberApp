@@ -2,6 +2,8 @@ import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import barberCardStyle from "./style";
 import Feather from "react-native-vector-icons/Feather";
+import { useNavigation } from "@react-navigation/native";
+import { LoggedUserScreensNavigationProp } from "../../../../types/routeTypes";
 
 interface Props {
   barberName: string;
@@ -14,10 +16,11 @@ const BarberCard: React.FC<Props> = ({
   startEndHour,
   workingDays,
 }) => {
+  const navigation = useNavigation<LoggedUserScreensNavigationProp>();
   return (
     <TouchableOpacity
       style={barberCardStyle.containerWrapper}
-      onPress={() => console.log("clicou")}
+      onPress={() => navigation.navigate("appointments")}
     >
       <View style={[barberCardStyle.circleImage, { overflow: "hidden" }]}>
         <Image
