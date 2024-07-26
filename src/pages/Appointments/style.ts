@@ -23,6 +23,12 @@ const appointmentStyle = StyleSheet.create({
     fontSize: 20,
     color: "white",
   },
+  calendarContainer: {
+    borderRadius: 20,
+    overflow: "hidden",
+    borderWidth: 1,
+    marginBottom: 30,
+  },
 });
 
 export default appointmentStyle;
